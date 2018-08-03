@@ -42,8 +42,10 @@ let mappings1 = {
 let fizzfunction1 = new Fizzbuzz(mappings1);
 
 describe("fizzbuzz with more than two numbers mapping", function() {
-  it("returns invalid mappings when mappings are given for more than 2 numbers", function() {
-    fizzfunction1.value(1).should.equals("Invalid mapping. Please enter mappings for two numbers only.");
-    fizzfunction1.value(2).should.equals("Invalid mapping. Please enter mappings for two numbers only.");
+  it("returns correct mappings when mappings are given for more than 2 numbers", function() {
+    fizzfunction1.value(1).should.equals(1);
+    fizzfunction1.value(2).should.equals(2);
+    fizzfunction1.value(7).should.equals("map7");
+    fizzfunction1.value(105).should.equals("map3map5map7");
   });
 });
